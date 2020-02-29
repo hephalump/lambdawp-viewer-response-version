@@ -43,7 +43,6 @@ class LambdaArn {
         }
       }
     });
-    console.log(key);
     return key
       ? {
         'Fn::Join': [
