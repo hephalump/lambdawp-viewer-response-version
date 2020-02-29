@@ -12,26 +12,19 @@ class LambdaArn {
   }
 
   updateLambdaVersion() {
-    console.log("STEP 1: ", "STARTED");
     const resources = this.serverless.service.resources.Resources;
-      console.log("STEP 2: ", resources);
     const compiledResources = this.serverless.service.provider
       .compiledCloudFormationTemplate.Resources;
-      console.log("STEP 3: ", compiledResources);
     const lambdaArns = this.getResourcesWLambdaAssoc(resources);
-      console.log("STEP 4: ", lambdaArns);
     _.forEach(lambdaArns, value => {
       const associations =
         value.Properties.DistributionConfig.CacheBehaviors[0].LambdaFunctionAssociations;
-        console.log("STEP 5: ", associations);
       _.forEach(associations, association => {
         const arn = association.LambdaFunctionARN;
-          console.log("STEP 6: ", arn);
         const versionRef = this.getArnAndVersion(compiledResources, arn);
-          console.log("STEP 7: ", versionRef);
         if (arn && versionRef) {
           this.serverless.cli.log(
-            `serverless-lambda-version: injecting arn+version for ${JSON.stringify(
+            `LambdaWP: injecting arn+version for ${JSON.stringify(
               arn
             )}`
           );
