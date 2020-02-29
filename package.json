@@ -1,0 +1,44 @@
+{
+  "author": {
+    "name": "hephalump",
+    "email": "me@hephalump.io",
+    "url": "http://hephalump.io"
+  },
+  "bugs": {
+    "url": "https://github.com/hephalump/lambdawp-viewer-response-version/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "deprecated": false,
+  "description": "Serverless plugin to auto update lambda function version for Lambda@Edge LambdaFunctionAssociations in LambdaWP",
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.7.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-lodash": "^2.4.5",
+    "eslint-plugin-promise": "^3.5.0",
+    "serverless": "^1.23.0"
+  },
+  "homepage": "https://github.com/hephalump/lambdawp-viewer-response-version/blob/master/README.md",
+  "keywords": [
+    "serverless",
+    "plugin",
+    "lambda",
+    "edge",
+    "arn",
+    "version"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "lambdawp-viewer-response-version",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hephalump/lambdawp-viewer-response-version.git"
+  },
+  "scripts": {
+    "eslint": "node node_modules/eslint/bin/eslint.js --ext .js ."
+  },
+  "version": "0.1.2"
+}
